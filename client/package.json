@@ -12,9 +12,6 @@
     "prettier": "prettier --check \"src/**/(*.tsx|*.ts|*.css|*.scss)\"",
     "prettier:fix": "prettier --write \"src/**/(*.tsx|*.ts|*.css|*.scss)\""
   },
-  "engines": {
-    "node": "18.18.0"
-  },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
     "framer-motion": "^12.7.4",
