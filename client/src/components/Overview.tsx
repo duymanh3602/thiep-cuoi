@@ -14,7 +14,7 @@ const Overview: React.FC = () => {
           <span className='text-gray-600'>Thu Uyên</span> <span className='text-pink-300'>&</span>{' '}
           <span className='text-gray-600'>Hải Long</span>
         </h1>
-        <p className='text-gray-600 mb-6'>19 Tháng 5 2025</p>
+        <p className='text-gray-600 mb-6'>17 Tháng 5 2025</p>
         <motion.a
           href='#wedding-info'
           whileHover={{ scale: 1.05 }}

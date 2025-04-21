@@ -45,11 +45,10 @@ const GuestBook: React.FC = () => {
   }
 
   return (
-    <section id='guest-book' className='bg-gray-50 py-16 px-4 flex justify-center items-center min-h-screen'>
-      <div className='bg-white shadow-xl border border-gray-200 rounded-xl max-w-2xl w-full p-6 relative overflow-hidden'>
+    <section id='guest-book' className='relative bg-gray-50 py-16 px-4 flex justify-center items-center min-h-screen'>
+      <div className='bg-white shadow-xl border border-gray-200 rounded-xl max-w-2xl w-full p-6 relative overflow-hidden z-2'>
         <h2 className='text-center text-3xl text-gray-700 mb-6'>Sổ Lưu Bút</h2>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className='space-y-4 mb-8'>
           <input
             name='name'

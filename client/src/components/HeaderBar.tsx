@@ -6,7 +6,7 @@ const HeaderBar = () => {
   return (
     <div className='flex items-center justify-between bg-gray-800 p-4 sticky top-0 w-full z-50 bg-white text-gray-800 shadow-md px-5 lg:px-20'>
       <div>
-        <span className='text-gray-600 text-xl'>Thu Uyên ❤ Hải Long</span>
+        <span className='marmelad-regular text-gray-600 text-xl'>Thu Uyên ❤ Hải Long</span>
       </div>
       <div className='relative'></div>
       <button
