@@ -15,7 +15,8 @@ type Props = {
   data: DataItem[]
 }
 
-const DataTable: React.FC<Props> = ({ data }) => {
+const DataTable: React.FC<Props> = () => {
+  const [data, setData] = React.useState<DataItem[]>([])
   return (
     <div className='p-4'>
       <h2 className='text-xl font-semibold mb-4'>Data Table</h2>
