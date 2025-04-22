@@ -3,7 +3,7 @@ import React from 'react'
 const GiftBox: React.FC = () => {
   const gifts = [
     {
-      title: 'Mừng cưới đến chú rể',
+      title: 'Mừng cưới đến cô dâu',
       qr: 'https://placehold.co/500x500',
       bank: 'VIETCOMBANK',
       name: 'DINH THI THU UYEN',
@@ -22,7 +22,7 @@ const GiftBox: React.FC = () => {
 
   return (
     <section id='gift-box' className='bg-white py-16 px-4 text-center'>
-      <h2 className='text-3xl text-gray-600 mb-8'>Hộp mừng cưới</h2>
+      <h2 className='text-4xl lg:text-6xl font-peristiwa text-gray-600 mb-8'>Hộp mừng cưới</h2>
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6 justify-center items-start max-w-4xl mx-auto'>
         {gifts.map((gift, index) => (
@@ -31,7 +31,7 @@ const GiftBox: React.FC = () => {
             <img
               src={gift.qr}
               alt={`QR ${gift.name}`}
-              className='mx-auto w-40 h-40 object-contain mb-4 border-4 border-white'
+              className='mx-auto w-60 h-60 object-contain mb-4 border-4 border-white'
             />
             <p className='text-sm'>Ngân hàng: {gift.bank}</p>
             <p className='text-sm'>Tên tài khoản: {gift.name}</p>

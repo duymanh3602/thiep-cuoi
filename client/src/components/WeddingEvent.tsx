@@ -30,7 +30,7 @@ const WeddingEvent: React.FC = () => {
       style={{ backgroundImage: `url('https://placehold.co/1920x1080')` }}
     >
       <div className='bg-gray-200/60 border border-gray-600 bg-opacity-40 p-6 md:p-10 rounded-xl max-w-3xl w-full text-white'>
-        <h2 className='text-3xl text-gray-600 md:text-4xl font-bold text-center mb-4'>Sự Kiện Cưới</h2>
+        <h2 className='text-4xl lg:text-6xl text-gray-600 text-center font-peristiwa mb-4'>Sự kiện cưới</h2>
         <p className='text-gray-600 text-center text-sm md:text-base mb-8'>
           Tình yêu đích thực đứng vững phía nhau trong những ngày tốt đẹp và sát cánh hơn trong những ngày tồi tệ.
         </p>

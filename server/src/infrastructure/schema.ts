@@ -9,3 +9,10 @@ export const inviteData = mysqlTable('invite_data', {
   updatedAt: timestamp().notNull().defaultNow().onUpdateNow(),
   isSeen: tinyint().notNull().default(0)
 })
+
+export const guestBook = mysqlTable('guest_book', {
+  id: varchar({ length: 36 }).primaryKey(),
+  name: varchar({ length: 255 }),
+  content: longtext(),
+  createdAt: timestamp().notNull().defaultNow()
+})

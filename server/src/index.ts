@@ -5,7 +5,7 @@ import helmet from 'helmet'
 import compression from 'compression'
 import cors from 'cors'
 import { createServer } from 'http'
-import router from './controller'
+import router from './controller/guest-book'
 
 const corsWhitelist = process.env.CORS_WHITELIST || ''
 const port = process.env.PORT || 3000

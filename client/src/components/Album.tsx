@@ -18,7 +18,7 @@ const images = [
 const Album: React.FC = () => {
   return (
     <section id='album' className='py-16 bg-white text-center'>
-      <h2 className='text-2xl font-semibold text-gray-700 mb-2 font-peristiwa'>Album Hình Cưới</h2>
+      <h2 className='text-4xl lg:text-6xl text-gray-700 mb-2 font-peristiwa'>Album ảnh cưới</h2>
       <div className='w-20 h-1 bg-gray-300 mx-auto mb-8 rounded' />
 
       <div className='columns-2 md:columns-3 gap-4 px-4 max-w-5xl mx-auto space-y-4'>

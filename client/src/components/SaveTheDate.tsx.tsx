@@ -35,10 +35,14 @@ const SaveTheDatePage: React.FC = () => {
       }}
     >
       <div className='bg-gray-200/60 bg-opacity-80 p-8 rounded-lg border border-gray-600 text-center max-w-xl w-full'>
-        <h1 className='text-gray-600 text-4xl font-bold mb-2 font-peristiwa'>The Big Day!</h1>
+        <h1 className='text-gray-600 text-3xl mb-2 font-peristiwa'>The Big Day!</h1>
 
         <p className='text-lg mt-4 text-gray-600'>
-          <strong className=''>Thu Uyên & Hải Long</strong>
+          <div className='flex flex-col md:flex-row md:items-center md:space-x-2 text-center justify-center'>
+            <span className='text-4xl md:text-5xl'>Thu Uyên</span>
+            <span className='text-xl md:text-6xl'>&</span>
+            <span className='text-4xl md:text-5xl'>Hải Long</span>
+          </div>
         </p>
         <p className='text-gray-600 text-sm mt-2'>
           Một lời chúc của bạn chắc chắn sẽ làm cho đám cưới của chúng tôi có thêm một niềm hạnh phúc!
@@ -49,11 +53,11 @@ const SaveTheDatePage: React.FC = () => {
             onClick={() => document.getElementById('guest-book')?.scrollIntoView()}
             className='border border-gray-600 px-4 py-2 rounded hover:bg-white text-gray-600 hover:text-black transition'
           >
-            Gửi lời chúc
+            Gửi lời chúc phúc
           </button>
-          <button className='border border-gray-600 px-4 py-2 rounded hover:bg-white text-gray-600 hover:text-black transition'>
+          {/* <button className='border border-gray-600 px-4 py-2 rounded hover:bg-white text-gray-600 hover:text-black transition'>
             Xác nhận tham dự
-          </button>
+          </button> */}
         </div>
 
         <p className='text-gray-600 text-2xl mt-6 font-semibold'>9AM - 17 Tháng 5 2025</p>
