@@ -14,13 +14,12 @@ router.get('/list', async (_req: Request, res: Response, next: NextFunction) => 
   }
 })
 
-// Create invite data
 router.post('/create', async (req: Request, res: Response, next: NextFunction) => {
   try {
     const { name, message: content } = req.body
 
     if (!name || !content) {
-      return res.status(400).json({ message: 'Name and email are required' })
+      res.status(400).json({ message: 'Name and email are required' })
     }
 
     const newData = {
@@ -31,7 +30,7 @@ router.post('/create', async (req: Request, res: Response, next: NextFunction) =
     }
 
     await db.insert(guestBook).values(newData)
-    return res.status(200).json({ id: newData.id })
+    res.status(200).json({ id: newData.id })
   } catch (error) {
     next(error)
   }
