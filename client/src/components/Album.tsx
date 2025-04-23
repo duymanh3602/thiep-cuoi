@@ -1,44 +1,73 @@
-import React from 'react'
+import React, { useMemo, useState } from 'react'
 
-const images = [
-  'https://placehold.co/300x400',
-  'https://placehold.co/300x500',
-  'https://placehold.co/300x450',
-  'https://placehold.co/300x350',
-  'https://placehold.co/300x600',
-  'https://placehold.co/300x400',
-  'https://placehold.co/300x500',
-  'https://placehold.co/300x380',
-  'https://placehold.co/300x470',
-  'https://placehold.co/300x520',
-  'https://placehold.co/300x430',
-  'https://placehold.co/300x390'
-]
+import { ColumnsPhotoAlbum } from 'react-photo-album'
+import 'react-photo-album/columns.css'
+
+import Lightbox from 'yet-another-react-lightbox'
+import 'yet-another-react-lightbox/styles.css'
+
+import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen'
+import Slideshow from 'yet-another-react-lightbox/plugins/slideshow'
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
+import Zoom from 'yet-another-react-lightbox/plugins/zoom'
+import 'yet-another-react-lightbox/plugins/thumbnails.css'
+import photos from './photos'
+
+// const images = [
+//   'https://placehold.co/300x400',
+//   'https://placehold.co/300x500',
+//   'https://placehold.co/300x450',
+//   'https://placehold.co/300x350',
+//   'https://placehold.co/300x600',
+//   'https://placehold.co/300x400',
+//   'https://placehold.co/300x500',
+//   'https://placehold.co/300x380',
+//   'https://placehold.co/300x470',
+//   'https://placehold.co/300x520',
+//   'https://placehold.co/300x430',
+//   'https://placehold.co/300x390'
+// ]
 
 const Album: React.FC = () => {
+  const [index, setIndex] = useState(-1)
+  const [isShowAll, setIsShowAll] = useState(false)
+
+  const photoList = useMemo(() => {
+    if (isShowAll) {
+      return photos
+    }
+    return photos.slice(0, 10)
+  }, [isShowAll])
+
   return (
     <section id='album' className='py-16 bg-white text-center'>
       <h2 className='text-4xl lg:text-6xl text-gray-700 mb-2 font-peristiwa'>Album ảnh cưới</h2>
       <div className='w-20 h-1 bg-gray-300 mx-auto mb-8 rounded' />
-
-      <div className='columns-2 md:columns-3 gap-4 px-4 max-w-5xl mx-auto space-y-4'>
-        {images.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`Ảnh cưới ${index + 1}`}
-            className='rounded-lg shadow-md w-full hover:scale-105 transition-transform'
-          />
-        ))}
+      <div className='max-w-5xl mx-auto px-4'>
+        <ColumnsPhotoAlbum photos={photoList} onClick={({ index }) => setIndex(index)} />
       </div>
 
+      <Lightbox
+        slides={photoList}
+        open={index >= 0}
+        index={index}
+        close={() => {
+          setIndex(-1)
+          setIsShowAll(false)
+        }}
+        plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+      />
+
       <div className='mt-10'>
-        <a
-          href='#all-photos'
+        <button
+          onClick={() => {
+            setIndex(1)
+            setIsShowAll(true)
+          }}
           className='inline-block bg-blue-100 text-blue-600 px-6 py-2 rounded-full text-sm hover:bg-blue-200 transition'
         >
           Tất cả hình ảnh
-        </a>
+        </button>
       </div>
     </section>
   )
