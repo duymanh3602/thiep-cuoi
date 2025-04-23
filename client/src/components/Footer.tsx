@@ -6,7 +6,7 @@ const Footer = () => {
           Sự hiện diện của quý cô chú, anh chị là niềm hạnh phúc trọn vẹn và là lời chúc phúc ý nghĩa nhất dành cho gia
           đình chúng tôi.
         </p>
-        <p>Made with ❤️ by em trai Đinh Duy Mạnh</p>
+        {/* <p>Made with ❤️ by em trai Đinh Duy Mạnh</p> */}
       </div>
     </footer>
   )
