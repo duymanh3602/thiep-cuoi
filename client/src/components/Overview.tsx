@@ -10,11 +10,13 @@ const Overview: React.FC = () => {
       <div className='absolute inset-0 bg-opacity-60 z-0' />
       <div className='relative z-10 text-center px-4'>
         <p className='text-lg tracking-widest uppercase text-gray-600 mb-2'>Save The Date</p>
-        <div className='flex flex-col md:flex-row md:items-center md:space-x-2 text-center items-center justify-center'>
-          <span className='text-5xl text-gray-600 md:text-6xl'>Thu Uyên</span>
-          <span className='text-5xl md:text-6xl text-pink-300'>&</span>
-          <span className='text-5xl text-gray-600 md:text-6xl'>Hải Long</span>
-          <div className='w-20 border border-gray-600 h-[1px] mt-6'></div>
+        <div className='flex flex-col md:items-center md:space-x-2 text-center items-center justify-center'>
+          <div className='flex flex-col md:flex-row md:items-center md:space-x-2 text-center items-center justify-center'>
+            <span className='text-5xl text-gray-600 md:text-6xl'>Thu Uyên</span>
+            <span className='text-5xl md:text-6xl text-pink-300'>&</span>
+            <span className='text-5xl text-gray-600 md:text-6xl'>Hải Long</span>
+          </div>
+          <div className='w-20 border border-gray-600 h-[1px] mt-4 mb-2'></div>
         </div>
         <p className='text-gray-600 mb-6 mt-2'>17 Tháng 5 2025</p>
         <motion.a
