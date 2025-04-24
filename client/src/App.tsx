@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import Album from './components/Album'
 import GiftBox from './components/GiftBox.tsx'
 import DateStory from './components/DateStory'
@@ -9,10 +10,28 @@ import SaveTheDatePage from './components/SaveTheDate.tsx'
 import WeddingEvent from './components/WeddingEvent'
 import Lottie from 'lottie-react'
 import lottie from './assets/lottie.json'
-import { useState } from 'react'
 
 function App() {
   const [showLottie, setShowLottie] = useState(true)
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsHeaderVisible(false) // Hide header when scrolling down
+      } else {
+        setIsHeaderVisible(true) // Show header when scrolling up
+      }
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [lastScrollY])
 
   return (
     <div className='w-full flex flex-col'>
@@ -27,7 +46,13 @@ function App() {
         </div>
       ) : (
         <>
-          <HeaderBar />
+          <div
+            className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+              isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
+            }`}
+          >
+            <HeaderBar />
+          </div>
           <Overview />
           <DateStory />
           <SaveTheDatePage />

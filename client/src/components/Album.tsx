@@ -30,14 +30,13 @@ import photos from './photos'
 
 const Album: React.FC = () => {
   const [index, setIndex] = useState(-1)
-  const [isShowAll, setIsShowAll] = useState(false)
 
   const photoList = useMemo(() => {
-    if (isShowAll) {
+    if (index >= 0) {
       return photos
     }
     return photos.slice(0, 10)
-  }, [isShowAll])
+  }, [index])
 
   return (
     <section id='album' className='py-16 bg-white text-center'>
@@ -53,7 +52,6 @@ const Album: React.FC = () => {
         index={index}
         close={() => {
           setIndex(-1)
-          setIsShowAll(false)
         }}
         plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
       />
@@ -62,7 +60,6 @@ const Album: React.FC = () => {
         <button
           onClick={() => {
             setIndex(1)
-            setIsShowAll(true)
           }}
           className='inline-block bg-blue-100 text-blue-600 px-6 py-2 rounded-full text-sm hover:bg-blue-200 transition'
         >
