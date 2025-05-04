@@ -5,9 +5,9 @@ const Overview: React.FC = () => {
   return (
     <section
       className='relative h-screen bg-cover bg-center flex items-center justify-center text-white'
-      style={{ backgroundImage: "url('https://placehold.co/1920x1080')" }}
+      style={{ backgroundImage: "url('https://uyenlong.manhdinh.dev/BAC_6017.JPG')" }}
     >
-      <div className='absolute inset-0 bg-opacity-60 z-0' />
+      <div className='absolute inset-0 bg-opacity-60 z-0 backdrop-blur-[1px]' />
       <div className='relative z-10 text-center px-4'>
         <p className='text-lg tracking-widest uppercase text-gray-600 mb-2'>Save The Date</p>
         <div className='flex flex-col md:items-center md:space-x-2 text-center items-center justify-center'>

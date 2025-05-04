@@ -60,7 +60,7 @@ const SaveTheDatePage: React.FC = () => {
           </button> */}
         </div>
 
-        <p className='text-gray-600 text-2xl mt-6 font-semibold'>9 giờ 00 phút - 17 Tháng 5 2025</p>
+        <p className='text-gray-600 text-2xl mt-6 font-semibold'>8 giờ 00 phút - 17 Tháng 5 2025</p>
 
         <div className='flex justify-center mt-4 space-x-6 text-center text-lg'>
           <div>
