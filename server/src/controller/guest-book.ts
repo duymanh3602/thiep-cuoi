@@ -36,4 +36,12 @@ router.post('/create', async (req: Request, res: Response, next: NextFunction) =
   }
 })
 
+router.get('/health', async (_req: Request, res: Response, next: NextFunction) => {
+  try {
+    res.json({ message: 'ok' })
+  } catch (error) {
+    next(error)
+  }
+})
+
 export default router

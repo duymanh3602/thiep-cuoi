@@ -6,20 +6,37 @@ interface WeddingEvent {
   time: string
   location: string
   image: string
+  map: string
 }
 
 const events: WeddingEvent[] = [
   {
-    title: 'LỄ CƯỚI NHÀ GÁI',
-    time: '09:00 19/05/2025',
+    title: 'TIỆC CƯỚI NHÀ GÁI',
+    time: '16:00 16/05/2025',
     location: 'Tổ 7, phường Cam Giá, TP. Thái Nguyên, Tỉnh Thái Nguyên',
-    image: 'https://placehold.co/300x300'
+    image: 'https://placehold.co/300x300',
+    map: 'https://maps.app.goo.gl/ZR4NcUP629gPnJxs7'
   },
   {
-    title: 'LỄ CƯỚI NHÀ TRAI',
-    time: '09:00 19/05/2025',
+    title: 'LỄ VU QUY',
+    time: '09:00 17/05/2025',
     location: 'Tổ 7, phường Cam Giá, TP. Thái Nguyên, Tỉnh Thái Nguyên',
-    image: 'https://placehold.co/300x300'
+    image: 'https://placehold.co/300x300',
+    map: 'https://maps.app.goo.gl/ZR4NcUP629gPnJxs7'
+  },
+  {
+    title: 'TIỆC CƯỚI NHÀ TRAI',
+    time: '16:00 16/05/2025',
+    location: 'Tổ 7, phường Cam Giá, TP. Thái Nguyên, Tỉnh Thái Nguyên',
+    image: 'https://placehold.co/300x300',
+    map: ''
+  },
+  {
+    title: 'LỄ THÀNH HÔN',
+    time: '10:00 17/05/2025',
+    location: 'Tổ 7, phường Cam Giá, TP. Thái Nguyên, Tỉnh Thái Nguyên',
+    image: 'https://placehold.co/300x300',
+    map: ''
   }
 ]
 
@@ -39,7 +56,7 @@ const WeddingEvent: React.FC = () => {
           {events.map((event, index) => (
             <div
               key={index}
-              className='bg-white items-center flex bg-opacity-90 rounded-xl p-4 flex items-start space-x-4 border border-gray-300'
+              className='bg-white items-center flex bg-opacity-90 rounded-xl p-4 flex space-x-4 border border-gray-300 cursor-pointer hover:shadow-lg transition duration-300 relative group'
             >
               <img
                 src={event.image}
@@ -57,6 +74,19 @@ const WeddingEvent: React.FC = () => {
                   {event.location}
                 </div>
               </div>
+              {event.map && (
+                <a
+                  href={`${event.map}`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='hidden lg:block inset-x-0 bottom-2 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'
+                  title='Chỉ đường'
+                >
+                  <button className='bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300'>
+                    Chỉ đường
+                  </button>
+                </a>
+              )}
             </div>
           ))}
         </div>
