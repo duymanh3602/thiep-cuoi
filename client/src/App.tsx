@@ -59,7 +59,7 @@ function App() {
           <Album />
           <WeddingEvent />
           <GuestBook />
-          <GiftBox />
+          {/* <GiftBox /> */}
           <Footer />
         </>
       )}

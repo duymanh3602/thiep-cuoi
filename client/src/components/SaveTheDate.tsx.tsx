@@ -30,7 +30,7 @@ const SaveTheDatePage: React.FC = () => {
       id='event'
       className='relative min-h-screen bg-cover bg-center text-white flex flex-col items-center justify-center px-4'
       style={{
-        backgroundImage: `url('https://placehold.co/1920x1080')`,
+        backgroundImage: `url('https://uyenlong.manhdinh.dev/BAC_5690.JPG')`,
         backdropFilter: 'blur(4px)'
       }}
     >

@@ -14,28 +14,28 @@ const events: WeddingEvent[] = [
     title: 'TIỆC CƯỚI NHÀ GÁI',
     time: '16:00 16/05/2025',
     location: 'Tổ 7, phường Cam Giá, TP. Thái Nguyên, Tỉnh Thái Nguyên',
-    image: 'https://placehold.co/300x300',
+    image: 'https://uyenlong.manhdinh.dev/BAC_5815.JPG',
     map: 'https://maps.app.goo.gl/ZR4NcUP629gPnJxs7'
   },
   {
     title: 'LỄ VU QUY',
-    time: '09:00 17/05/2025',
+    time: '08:00 17/05/2025',
     location: 'Tổ 7, phường Cam Giá, TP. Thái Nguyên, Tỉnh Thái Nguyên',
-    image: 'https://placehold.co/300x300',
+    image: 'https://uyenlong.manhdinh.dev/BAC_5815.JPG',
     map: 'https://maps.app.goo.gl/ZR4NcUP629gPnJxs7'
   },
   {
     title: 'TIỆC CƯỚI NHÀ TRAI',
     time: '16:00 16/05/2025',
-    location: 'Tổ 7, phường Cam Giá, TP. Thái Nguyên, Tỉnh Thái Nguyên',
-    image: 'https://placehold.co/300x300',
+    location: 'Tổ 10, phường Phú Xá, TP. Thái Nguyên, Tỉnh Thái Nguyên',
+    image: 'https://uyenlong.manhdinh.dev/BAC_5996.JPG',
     map: ''
   },
   {
     title: 'LỄ THÀNH HÔN',
-    time: '10:00 17/05/2025',
-    location: 'Tổ 7, phường Cam Giá, TP. Thái Nguyên, Tỉnh Thái Nguyên',
-    image: 'https://placehold.co/300x300',
+    time: '09:30 17/05/2025',
+    location: 'Tổ 10, phường Phú Xá, TP. Thái Nguyên, Tỉnh Thái Nguyên',
+    image: 'https://uyenlong.manhdinh.dev/BAC_5996.JPG',
     map: ''
   }
 ]
@@ -44,7 +44,7 @@ const WeddingEvent: React.FC = () => {
   return (
     <section
       className='relative py-16 px-4 bg-cover bg-center min-h-[100vh] flex items-center justify-center'
-      style={{ backgroundImage: `url('https://placehold.co/1920x1080')` }}
+      style={{ backgroundImage: `url('https://uyenlong.manhdinh.dev/BAC_5920.JPG')` }}
     >
       <div className='bg-gray-200/60 border border-gray-600 bg-opacity-40 p-6 md:p-10 rounded-xl max-w-3xl w-full text-white'>
         <h2 className='text-4xl lg:text-6xl text-gray-600 text-center font-peristiwa mb-4'>Sự kiện cưới</h2>
