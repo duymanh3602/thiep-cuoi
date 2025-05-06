@@ -48,7 +48,7 @@ const GuestBook: React.FC = React.memo(() => {
             onChange={handleChange}
             required
             placeholder='Tên của bạn*'
-            className='w-full border border-gray-300 p-2 rounded-md focus:outline-none'
+            className='w-full border text-gray-600 border-gray-300 p-2 rounded-md focus:outline-none'
           />
           <textarea
             name='message'
@@ -57,7 +57,7 @@ const GuestBook: React.FC = React.memo(() => {
             required
             placeholder='Nhập lời chúc của bạn*'
             rows={3}
-            className='w-full border border-gray-300 p-2 rounded-md focus:outline-none resize-none'
+            className='w-full border text-gray-600 border-gray-300 p-2 rounded-md focus:outline-none resize-none'
           ></textarea>
           <button
             type='submit'

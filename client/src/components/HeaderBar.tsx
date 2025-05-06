@@ -40,11 +40,11 @@ const HeaderBar = () => {
                 Sổ lưu bút
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href='#gift-box' className='block px-4 py-2 text-gray-600 hover:bg-gray-100'>
                 Mừng cưới
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       )}
@@ -70,11 +70,11 @@ const HeaderBar = () => {
               Sổ lưu bút
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href='#gift-box' className='text-gray-600 font-semibold hover:text-gray-400'>
               Mừng cưới
             </a>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <div className='absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden sm:hidden'>
@@ -99,11 +99,11 @@ const HeaderBar = () => {
               Sổ lưu bút
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href='#gift-box' className='block px-4 py-2 text-gray-600 hover:bg-gray-100'>
               Mừng cưới
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
