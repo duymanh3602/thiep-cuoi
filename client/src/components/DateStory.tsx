@@ -1,17 +1,17 @@
 import React from 'react'
 
-const DateStory: React.FC = () => {
+const DateStory: React.FC = React.memo(() => {
   return (
     <section id='love-story' className='bg-white py-12 text-center px-4'>
       <h2 className='text-4xl lg:text-6xl font-peristiwa text-gray-800 mb-4'>We are Getting Married</h2>
       <div className='flex justify-center items-center gap-6 flex-col md:flex-row'>
         <img
-          src='https://uyenlong.manhdinh.dev/BAC_5997.JPG'
+          src='https://uyenlong.manhdinh.dev/BAC_5997.webp'
           alt='Groom'
           className='w-80 h-100 object-cover rounded-md shadow-lg'
         />
         <img
-          src='https://uyenlong.manhdinh.dev/BAC_5942.JPG'
+          src='https://uyenlong.manhdinh.dev/BAC_5942.webp'
           alt='Bride'
           className='w-80 h-100 object-cover rounded-md shadow-lg'
         />
@@ -24,6 +24,6 @@ const DateStory: React.FC = () => {
       <p className='mt-4 text-gray-600 italic'>— Thu Uyên & Hải Long</p>
     </section>
   )
-}
+})
 
 export default DateStory

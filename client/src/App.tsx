@@ -10,6 +10,7 @@ import SaveTheDatePage from './components/SaveTheDate.tsx'
 import WeddingEvent from './components/WeddingEvent'
 import Lottie from 'lottie-react'
 import lottie from './assets/lottie.json'
+import { debounce } from 'lodash'
 
 function App() {
   const [showLottie, setShowLottie] = useState(true)
@@ -17,15 +18,15 @@ function App() {
   const [lastScrollY, setLastScrollY] = useState(0)
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = debounce(() => {
       const currentScrollY = window.scrollY
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsHeaderVisible(false) // Hide header when scrolling down
+        setIsHeaderVisible(false)
       } else {
-        setIsHeaderVisible(true) // Show header when scrolling up
+        setIsHeaderVisible(true)
       }
       setLastScrollY(currentScrollY)
-    }
+    }, 100)
 
     window.addEventListener('scroll', handleScroll)
     return () => {

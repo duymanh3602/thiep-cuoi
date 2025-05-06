@@ -13,21 +13,6 @@ import Zoom from 'yet-another-react-lightbox/plugins/zoom'
 import 'yet-another-react-lightbox/plugins/thumbnails.css'
 import photos from './photos'
 
-// const images = [
-//   'https://placehold.co/300x400',
-//   'https://placehold.co/300x500',
-//   'https://placehold.co/300x450',
-//   'https://placehold.co/300x350',
-//   'https://placehold.co/300x600',
-//   'https://placehold.co/300x400',
-//   'https://placehold.co/300x500',
-//   'https://placehold.co/300x380',
-//   'https://placehold.co/300x470',
-//   'https://placehold.co/300x520',
-//   'https://placehold.co/300x430',
-//   'https://placehold.co/300x390'
-// ]
-
 const Album: React.FC = () => {
   const [index, setIndex] = useState(-1)
 

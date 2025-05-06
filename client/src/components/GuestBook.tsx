@@ -6,7 +6,7 @@ interface Message {
   message: string
 }
 
-const GuestBook: React.FC = () => {
+const GuestBook: React.FC = React.memo(() => {
   const [form, setForm] = useState({ name: '', message: '' })
   const [messages, setMessages] = useState<Message[]>([])
 
@@ -81,6 +81,6 @@ const GuestBook: React.FC = () => {
       </div>
     </section>
   )
-}
+})
 
 export default GuestBook
